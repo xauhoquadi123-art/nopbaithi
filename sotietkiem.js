@@ -3,7 +3,7 @@ class Sotietkiem {
         this.Ma = Ma;
         this.Loaitk = Loaitk;
         this.Hotenkh = Hotenkh;
-        this.ChungMND = CanCCD;
+        this.ChungMND = ChungMND;
         this.Ngaygui = Ngaygui;
         this.Sotien = Sotien;
     }
@@ -104,7 +104,7 @@ function xoaSoTietKiem() {
         let maCanXoa = prompt("Nhập Mã Sổ bạn muốn xóa:");
         if (maCanXoa === null) return;
         maCanXoa = maCanXoa.trim();
-        let index = danhSachSo.findIndex(so => so.maSo === maCanXoa);
+        let index = danhSachSo.findIndex(so => Ma === maCanXoa);
 
         if (index === -1) {
             alert("Mã sổ tiết kiệm nhập sai hoặc không có trong danh sách. Yêu cầu nhập lại!");
