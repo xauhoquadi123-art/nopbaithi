@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function xemMau(tu1, mau1, tu2, mau2){
+    if (mau1 === 0 || mau2 === 0) {
+      return false;
+    }
+    if((tu1*mau2)===(tu2*mau1)){
+      return true;
+    }else {
+      return false;
+    }
+  }
+let tu1 = parseInt(prompt("Nhập vào tử thứ nhất"));
+let mau1 = parseInt(prompt("Nhập vào mẫu thứ nhất"));
+let tu2 = parseInt(prompt("Nhập vào tử thứ hai"));
+let mau2 = parseInt(prompt("Nhập vào mẫu thứ hai"));
+let ketqua = xemMau(tu1, mau1, tu2, mau2);
+console.log(`phân số 1: ${tu1}/${mau1}`);
+console.log(`phân số 2: ${tu2}/${mau2}`);
+console.log(`kết quả so sánh là: ${ketqua}`);
+</script>
+</body>
+</html>

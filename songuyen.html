@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isprime(x) {
+        if (x < 2)
+            return false;
+        for (let i = 2; i <= Math.sqrt(x); i++) {
+            if (x % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let n;
+    do {
+        n = parseInt(prompt("Nhập số lượng phần tử n (0<n<=50):"));
+
+    } while (isNaN(n) || n <= 0 || n > 50);
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        let value = parseInt(prompt(`Nhập phần tử a[${i}]:`));
+        a.push(value);
+    }
+    console.log("Mảng a là: ", a)
+    let b = [];
+    for (let i = 0; i < n; i++) {
+        if (isprime(a[i]) === true) {
+            b.push(a[i]);
+        }
+    }
+    if (b.length === 0) {
+        console.log("Mảng a không có số nguyên tố")
+    } else {
+        console.log("mảng b có các số nguyên tố là: ", b)
+    }
+</script>
+</body>
+</html>
